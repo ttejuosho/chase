@@ -8,6 +8,7 @@
 
 # production
 /build
+client/node_modules
 
 # misc
 .DS_Store

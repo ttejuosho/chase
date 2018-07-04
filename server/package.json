@@ -1,0 +1,9 @@
+{
+  "name": "Chase",
+  "version": "1.0.0",
+  "description": "Credit & Loans Bank",
+  "main": "index.js",
+  "repository": "https://github.com/ttejuosho/chase.git",
+  "author": "Taiwo Tejuosho",
+  "license": "MIT"
+}

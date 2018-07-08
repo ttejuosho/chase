@@ -8,9 +8,31 @@ module.exports = app => {
         });
     });
 
+// Get one customer
+    app.get('/api/customer/:id', (req,res) => {
+        db.Customer.findOne({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(data){
+            res.json(data);
+        });
+    });
+
 // Get all credit officers
     app.get('/api/credos', (req,res) => {
         db.Credit_Officer.findAll({}).then(data => {
+            res.json(data);
+        });
+    });
+
+// Get one Credit officer
+    app.get('/api/credos/:id', (req,res) => {
+        db.Credit_Officer.findOne({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(data){
             res.json(data);
         });
     });
@@ -31,7 +53,7 @@ module.exports = app => {
             res.json(data);
         });
     });
-    
+
 // Create new Credit Officers
     app.post('/api/credos', (req,res) => {
         db.Credit_Officer.create({
@@ -40,7 +62,7 @@ module.exports = app => {
             email: req.body.email,
             phone_number: req.body.phoneNumber,
             branch_name: req.body.branchName,
-            branch_Address: req.body.branchAddress,
+            branch_address: req.body.branchAddress,
             manager: req.body.manager
 
         }).then(data => {
@@ -49,32 +71,30 @@ module.exports = app => {
     });
 
 // Update Customer Information
-    app.put('/api/customer/:id', (req,res) => {
-        db.Customer.update({
-            Customer: req.body.Customer
-        }, {
+app.put('/api/customer/:id', (req,res) => {
+    db.Customer.update( req.body, 
+        {
             where: {
-                CustomerId: req.body.CustomerId
-            }
-        }).then(data => {
-            console.log("Updating: ", data)
-            res.json(data);
-        })
-    })
+            id: req.body.id
+        }
+    }).then(data => {
+        console.log("Updating: ", data)
+        res.json(data);
+    });
+});
 
 // Update Credit Officer information
     app.put('/api/credos/:id', (req,res) => {
-        db.Credit_Officer.update({
-            Credit_Officer: req.body.Credit_Officer
-        }, {
-            where: {
-                Credit_OfficerId: req.body.Credit_OfficerId
+        db.Credit_Officer.update( req.body, 
+            {
+                where: {
+                id: req.body.id
             }
         }).then(data => {
             console.log("Updating: ", data)
             res.json(data);
-        })
-    })
+        });
+    });
 
 
 }

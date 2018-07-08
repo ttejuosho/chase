@@ -32,13 +32,17 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING,
             allowNull: false
         }
-    }, ({timestamps: false})
+    }, ({timestamps: true})
 );
 
-    // Customer.associate = models => {
-    //     Customer.hasOne(models.SavingsAccount),
-    //     Customer.hasOne(models.LoansAccount)
-    // }
+    Customer.associate = models => {
+        Customer.belongsTo(models.Credit_Officer, {
+            foreignKey: {
+                allowNull: false,
+                onDelete: 'cascade'
+              }
+        })
+    }
 
     return Customer;
 }

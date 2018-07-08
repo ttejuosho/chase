@@ -29,7 +29,7 @@ app.get("*", (req, res) => {
 
 // Start our server so that it can begin listening to client requests.
 // sync({force: true}) = allows for testing - delete when hosting on heroku
-db.sequelize.sync().then(function () {
+db.sequelize.sync({force:false}).then(function () {
   console.log("DATABASE IS CONNECTED!");
   app.listen(PORT, function () {
     // Log (server-side) when our server has started

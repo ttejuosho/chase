@@ -21,14 +21,14 @@ module.exports = app => {
 
 // Get all credit officers
     app.get('/api/credos', (req,res) => {
-        db.Credit_Officer.findAll({}).then(data => {
+        db.CreditOfficer.findAll({}).then(data => {
             res.json(data);
         });
     });
 
 // Get one Credit officer
     app.get('/api/credos/:id', (req,res) => {
-        db.Credit_Officer.findOne({
+        db.CreditOfficer.findOne({
             where: {
                 id: req.params.id
             }
@@ -56,7 +56,7 @@ module.exports = app => {
 
 // Create new Credit Officers
     app.post('/api/credos', (req,res) => {
-        db.Credit_Officer.create({
+        db.CreditOfficer.create({
             first_name: req.body.firstName,
             last_name: req.body.lastName,
             email: req.body.email,
@@ -85,7 +85,7 @@ app.put('/api/customer/:id', (req,res) => {
 
 // Update Credit Officer information
     app.put('/api/credos/:id', (req,res) => {
-        db.Credit_Officer.update( req.body, 
+        db.CreditOfficer.update( req.body, 
             {
                 where: {
                 id: req.body.id
@@ -96,5 +96,30 @@ app.put('/api/customer/:id', (req,res) => {
         });
     });
 
+// Delete a Customer
+    app.delete('/api/customer/:id', (req,res) => {
+        db.Customer.destroy(req.body,
+            {
+                where: {
+                    id: req.body.id
+                }
+        }).then( data => {
+            console.log("Deleted: ", data);
+            res.json(data);
+        });
+    });
+
+// Delete a Credit Officer
+    app.delete('/api/customer/:id', (req,res) => {
+        db.CreditOfficer.destroy(req.body,
+            {
+                where: {
+                    id: req.body.id
+                }
+        }).then( data => {
+            console.log("Deleted: ", data);
+            res.json(data);
+        });
+    });
 
 }

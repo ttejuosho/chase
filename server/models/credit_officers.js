@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    const Credit_Officer = sequelize.define("Credit_Officer", {
+    const CreditOfficer = sequelize.define("CreditOfficer", {
         first_name: {
             type: DataTypes.STRING,
             allowNull: false
@@ -30,11 +30,11 @@ module.exports = function (sequelize, DataTypes) {
         }
     },({timestamps: true})
 )
-        Credit_Officer.associate = function(models) {
-            Credit_Officer.hasMany(models.Customer, {
+        CreditOfficer.associate = function(models) {
+            CreditOfficer.hasMany(models.Customer, {
                 onDelete: 'cascade'
             });
         };
 
-    return Credit_Officer;
+    return CreditOfficer;
 }

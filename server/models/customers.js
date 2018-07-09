@@ -36,13 +36,13 @@ module.exports = function(sequelize, DataTypes){
 );
 
     Customer.associate = models => {
-        Customer.belongsTo(models.Credit_Officer, {
+        Customer.belongsTo(models.CreditOfficer, {
             foreignKey: {
                 allowNull: false,
                 onDelete: 'cascade'
               }
         })
-    }
+    };
 
     return Customer;
 }

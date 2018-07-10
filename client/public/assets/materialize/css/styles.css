@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'WhitneySSm-Book'; /*a name to be used later*/
+    src: url('../fonts/WhitneySSm-Book.woff2'); /*URL to font*/
+  }
+
+
+body, html
+{
+    font-family: 'WhitneySSm-Book';
+}

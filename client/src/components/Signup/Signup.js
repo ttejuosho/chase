@@ -15,19 +15,19 @@ class Signup extends Component {
                             <div className="row">
                                 <div className="input-field col s12">
                                     <input name="name" type="text" />
-                                    <label for="name">Name</label>
+                                    <label htmlFor="name">Name</label>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="input-field col s12">
                                     <input name="email" type="email" />
-                                    <label for="email">Email</label>
+                                    <label htmlFor="email">Email</label>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="input-field col s12">
                                     <input name="password" type="password" />
-                                    <label for="password">Password</label>
+                                    <label htmlFor="password">Password</label>
                                 </div>
                             </div>
                         </div>

@@ -16,13 +16,13 @@ class Signin extends Component {
                             <div className="row">
                                 <div className="input-field col s12">
                                     <input id="email" name="email" type="email" className="validate" />
-                                    <label for="email">Email</label>
+                                    <label htmlFor="email">Email</label>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="input-field col s12">
                                     <input id="password" name="password" type="password" className="validate" />
-                                    <label for="password">Password</label>
+                                    <label htmlFor="password">Password</label>
                                 </div>
                             </div>
                         </div>

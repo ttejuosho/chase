@@ -27,6 +27,12 @@ class Signup extends Component {
                             </div>
                             <div className="row">
                                 <div className="input-field col s12">
+                                    <input name="phoneNumber" type="text" />
+                                    <label htmlFor="phoneNumber">Phone Number</label>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="input-field col s12">
                                     <input name="password" type="password" />
                                     <label htmlFor="password">Password</label>
                                 </div>

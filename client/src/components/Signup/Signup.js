@@ -8,10 +8,11 @@ class Signup extends Component {
 
     render() {
         return (
-            <div className="container">
+            <main>
                 <div className="row">
                     <form id="signup" name="signup" method="post" action="/signup" className="col s12">
                         <div className="input-field col s6 offset-s3">
+                        <h5>Register Here</h5>
                             <div className="row">
                                 <div className="input-field col s12">
                                     <input name="name" type="text" />
@@ -30,16 +31,20 @@ class Signup extends Component {
                                     <label htmlFor="password">Password</label>
                                 </div>
                             </div>
+                            <div className="row">
+                                <div className="input-field col s12">
+                                    <input name="password" type="password" />
+                                    <label htmlFor="password">Verify Password</label>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
                 <div className="row center">
-                    <button className="btn waves-effect waves-light purple widebtn" type="submit" value="Sign Up" name="action">
-                        <a className="btntxt">Sign Up<i className="mdi-content-send right"></i></a>
-                    </button>
-                    <p>Already a member ? <a className="hplink" href="/signin">Log in here</a></p>
+                    <button className="btn waves-effect waves-light" type="submit" value="Sign Up">Sign Up</button>
+                    <p>Already a member ? <a href="/signin">Log in here</a></p>
                 </div>
-            </div>
+            </main>
 
         )
     }

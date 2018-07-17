@@ -13,7 +13,7 @@ class Signin extends Component {
                     <form className="col s12" id="signin" method="post" action="signin">
                     <div className="row">
                         <div className="input-field col s6 offset-s3">
-                        <center><h3>Log In</h3></center>
+                        <h5 className="page-title">Log In</h5>
                             <div className="row">
                                 <div className="input-field col s12">
                                     <input id="email" name="email" type="email" className="validate" />

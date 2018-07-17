@@ -12,7 +12,7 @@ class Signup extends Component {
                 <div className="row">
                     <form id="signup" name="signup" method="post" action="/signup" className="col s12">
                         <div className="input-field col s6 offset-s3">
-                        <h5>Register Here</h5>
+                        <h5 className="page-title">Register Here</h5>
                             <div className="row">
                                 <div className="input-field col s12">
                                     <input name="name" type="text" />

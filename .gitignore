@@ -12,7 +12,7 @@ client/node_modules
 server/node_modules
 server/config
 client/src/firebase/firebase.js
-
+server/config
 # misc
 .DS_Store
 .env.local

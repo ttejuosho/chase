@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import { auth } from "../../firebase";
+import API from "../../utils/API";
 import "./Signup.css";
 
 

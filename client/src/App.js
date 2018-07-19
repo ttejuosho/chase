@@ -55,6 +55,11 @@ class App extends Component {
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/newcustomer" component={NewCustomer} />
                 <Route exact path="/newcreditofficer" component={NewCreditOfficer} />
+                <Route exact path="/customerprofile"
+                render={props => (
+                  <UserProfile {...props} userData={this.state.userData} 
+                               updateUserDataInApp={this.updateUserDataInApp}/>
+                )} />
               </Switch>
               <Footer />
             </div>

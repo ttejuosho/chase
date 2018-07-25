@@ -32,7 +32,7 @@ class Signin extends Component {
         const {
           email,
           password
-        }= this.state;
+        } = this.state;
         console.log(this.state);
 
         auth.doSignInWithEmailAndPassword(email, password)
@@ -58,8 +58,7 @@ class Signin extends Component {
         } = this.state;
 
         const isInvalid = 
-        password === "" ||
-        email === "";
+        password === "" || email === "";
 
         return (
             <div>
@@ -95,7 +94,7 @@ class Signin extends Component {
                 </div>
                 <div className="row center">
                     <button 
-                        disabled={isInvalid} onClick={this.handleFormSubmit}
+                        disabled={ isInvalid } onClick={this.handleFormSubmit}
                         className= { isInvalid ? "btn waves-effect waves-light" : "btn waves-effect waves-light"} type="submit"> Log In </button>
                     <p>Not a member yet ? <a href="/signup">Sign Up Here</a></p>
                 </div>

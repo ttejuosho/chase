@@ -8,7 +8,7 @@ const Header = ({ authUser }) => (
 <header className="navbar-fixed">
   <nav>
     <div className="nav-wrapper">
-      <Link href="/" className="brand-logo">Kòwòpè</Link>
+      <Link to="/" className="brand-logo">Kòwòpè</Link>
       <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
       <ul className="right hide-on-med-and-down">
         <li><a href="/">Branches</a></li>

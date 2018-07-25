@@ -9,6 +9,7 @@ import Home from "./views/Home";
 import Register from "./views/Register";
 import NewCustomer from './views/NewCustomer/NewCustomer';
 import NewCreditOfficer from './views/NewCreditOfficer/NewCreditOfficer';
+import customerProfile from './views/CustomerProfile/CustomerProfile';
 import API from "./utils/API";
 
 
@@ -57,7 +58,7 @@ class App extends Component {
                 <Route exact path="/newcreditofficer" component={NewCreditOfficer} />
                 <Route exact path="/customerprofile"
                 render={props => (
-                  <UserProfile {...props} userData={this.state.userData} 
+                  <customerProfile {...props} userData={this.state.userData} 
                                updateUserDataInApp={this.updateUserDataInApp}/>
                 )} />
               </Switch>

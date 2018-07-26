@@ -11,18 +11,20 @@ const Header = ({ authUser }) => (
       <Link to="/" className="brand-logo">Kòwòpè</Link>
       <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
       <ul className="right hide-on-med-and-down">
-        <li><a href="/">Branches</a></li>
-        <li><a href="/">Credit Officers</a></li>
-        <li><a href="/">Customers</a></li>
-        <li><a href="/signin">Log In</a></li>
+        <li><Link to="/">Branches</Link></li>
+        <li><Link to="/">Credit Officers</Link></li>
+        <li><Link to="/">Customers</Link></li>
+        { !authUser ? <li><Link to="/signin">Log In</Link></li> : "" }
+        { authUser ? <li><Link to="/home">Log Out</Link></li> : "" }
       </ul>
     </div>
   </nav>
   <ul className="sidenav" id="mobile-demo">
-        <li><a href="/">Branches</a></li>
-        <li><a href="/">Credit Officers</a></li>
-        <li><a href="/">Customers</a></li>
-        <li><a href="/signin">Log In</a></li>
+        <li><Link to="/">Branches</Link></li>
+        <li><Link to="/">Credit Officers</Link></li>
+        <li><Link to="/">Customers</Link></li>
+        { !authUser ? <li><Link to="/signin">Log In</Link></li> : "" }
+        { authUser ? <li><Link to="/home">Log Out</Link></li> : "" }
   </ul>
 </header>
 );

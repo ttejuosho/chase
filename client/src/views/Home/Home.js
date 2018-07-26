@@ -17,7 +17,7 @@ class Home extends Component {
                 <div className="col s12 m5 gorilla"> </div>
               </div>
               <div className="row center">
-                  <a id="cta__main" href="#!" className="btn btn-large">Learn More</a>
+                  <a id="cta__main" href="/signup" className="btn btn-large">Learn More</a>
               </div>
             </div>
           </div>

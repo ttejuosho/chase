@@ -95,7 +95,7 @@ class Signin extends Component {
                 <div className="row center">
                     <button 
                         disabled={ isInvalid } onClick={this.handleFormSubmit}
-                        className= { isInvalid ? "btn waves-effect waves-light" : "btn waves-effect waves-light"} type="submit"> Log In </button>
+                        className= { isInvalid ? "btn waves-effect waves-light" : "btn waves-effect waves-light" } type="submit"> Log In </button>
                     <p>Not a member yet ? <a href="/signup">Sign Up Here</a></p>
                 </div>
             </div>

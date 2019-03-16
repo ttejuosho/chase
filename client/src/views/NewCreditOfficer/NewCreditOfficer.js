@@ -10,7 +10,7 @@ class NewCreditOfficer extends Component{
             <div className="row">
                 <form id="signup" name="signup" method="post" action="/signup" className="col s12">
                     <div className="input-field col s6 offset-s3">
-                    <h5>Add a new customer</h5>
+                    <h5>Add New Credit Officer</h5>
                         <div className="row">
                             <div className="input-field col s12">
                                 <input name="co-name" type="text" />

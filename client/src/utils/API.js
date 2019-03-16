@@ -9,7 +9,11 @@ getUser: function (id) {
 
   //Create User in User table and Create User in fav table
 createUser: function (newUser) {
-    return axios.post("/api/users", newUser)
+    return axios.post("/api/users/", newUser)
+    .then(response => {
+    const UserId = { UserId: response.data.id };
+    return axios.post("/api/credos/", UserId)
+    })
 }
 
 }

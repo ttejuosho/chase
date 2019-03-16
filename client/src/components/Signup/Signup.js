@@ -122,10 +122,10 @@ class Signup extends Component {
                             </div>
                             <div className="row">
                                 <div className="input-field col s12">
-                                    <input name="password" type="passwordVerify" 
+                                    <input name="passwordVerify" type="password" 
                                     value = {this.state.passwordVerify} 
                                     onChange = {this.handleInputChange} />
-                                    <label htmlFor="password">Verify Password</label>
+                                    <label htmlFor="passwordVerify">Verify Password</label>
                                 </div>
                             </div>
                         </div>

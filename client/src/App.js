@@ -9,7 +9,7 @@ import Home from "./views/Home";
 import Register from "./views/Register";
 import NewCustomer from './views/NewCustomer/NewCustomer';
 import NewCreditOfficer from './views/NewCreditOfficer/NewCreditOfficer';
-import customerProfile from './views/CustomerProfile/CustomerProfile';
+import CustomerProfile from './views/CustomerProfile/CustomerProfile';
 import API from "./utils/API";
 
 
@@ -42,7 +42,6 @@ class App extends Component {
         this.setState({ userData })
       })
   }
-
 
   render() {
     return (
